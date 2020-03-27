@@ -1,0 +1,39 @@
+@import 'syntax-variables';
+
+@keyframes foxdot-flash {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+
+atom-text-editor.editor {
+	.highlight.foxdot-flash .region {
+		animation: foxdot-flash 300ms linear forwards;
+		background-color: @syntax-selection-flash-color;
+		z-index: -2;
+	}
+}
+
+atom-pane div.foxdot-logger {
+	padding: 3px 10px;
+	overflow: scroll;
+
+	> pre {
+		font-family: Consolas, monospace;
+		font-size: 14px;
+		margin-bottom: 2px;
+		white-space: pre-wrap;
+		word-break: keep-all;
+	}
+
+	> .error {
+		color: @text-color-error;
+	}
+
+	> .stdin {
+		font-style: italic;
+	}
+}
