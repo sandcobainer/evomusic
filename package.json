@@ -75,8 +75,9 @@
   "types": "lib/index.d.ts",
   "version": "1.1.0",
   "dependencies": {
-    "osc-js": "^2.1.0",
     "geneticalgorithm": "^1.0.2",
+    "lodash": "^4.17.15",
+    "osc-js": "^2.1.0",
     "total-serialism": "^1.6.4"
   }
 }
