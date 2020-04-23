@@ -23,36 +23,16 @@ TODO  Live coding practice:
 # paper
 
 
-p1 >> pads(degree=[4,6,7,2], dur=4, amp=0.5, room=1, slide=1, slidedelay=0.5, chop=2, delay=0.5)
-p2 >> pads(degree=[3,1,2,5], dur=0.5, amp=0.7, room=1, slide=0.2, slidedelay=0.2, chop=8, delay=0.2)
-evolve(p1, p2, stepSize = 1, updateFreq = 1, skipGenerations = 300, evolutions = 3000, mutationAmount = 0.25, crossoverAmount = 0.7)
+p1 >> pads(degree=[4,6,7,2], dur=4, amp=0.5, chop=2, delay=0.5)
+p2 >> pads(degree=[3,1,2,5], dur=0.5, amp=0.7, chop=8, delay=0.2)
+evolve(p1, p2, stepSize = 0.5, evolutions : 3000)
 
 @nextBar
 def autoEvolution():
-	p1>>pads(degree=[3,2,2,5],dur=[1],amp=[1],room=[1],slide=[1],slidedelay=[1],chop=[8],delay=[1])
+	p1>>pads(degree=[3,1,2,5],dur=[1],amp=[0.5],chop=[8.5],delay=[0])
 autoEvolution()
 
 @nextBar
 def autoEvolution():
-	p1>>pads(degree=[4,6,7,2],dur=[4],amp=[1],room=[1],slide=[1],slidedelay=[1],chop=[2],delay=[1])
+	p1>>pads(degree=[3,1,1,5],dur=[0.5],amp=[1],chop=[8],delay=[1])
 autoEvolution()
-
-@nextBar
-def autoEvolution():
-	p1>>pads(degree=[4,6,7,2],dur=[4],amp=[0],room=[1],slide=[1],slidedelay=[0],chop=[2],delay=[0])
-autoEvolution()
-
-@nextBar
-def autoEvolution():
-	p1>>pads(degree=[4,6,7,2],dur=[4],amp=[1],room=[1],slide=[1],slidedelay=[1],chop=[2],delay=[1])
-autoEvolution()
-
-@nextBar
-def autoEvolution():
-	p1>>pads(degree=[4,6,7,2],dur=[4],amp=[1],room=[1],slide=[1],slidedelay=[1],chop=[2],delay=[1])
-autoEvolution()
-
-@nextBar
-def autoEvolution():
-	p1>>pads(degree=[4,6,7,2],dur=[4],amp=[1],room=[1],slide=[1],slidedelay=[0],chop=[2],delay=[0])
-	p1>>pads(degree=[3,0,2,5],dur=[0],amp=[0],room=[2],slide=[0],slidedelay=[0],chop=[8],delay=[1])
