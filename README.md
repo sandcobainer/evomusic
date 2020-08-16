@@ -18,7 +18,6 @@ This is an extension of the native FoxDot interface for Atom. The earlier interf
 - Stop getEvolutions
 - Visual feedback for current evolution in text editor
 
-An example of evolution from player `p1` to `p2`
 ```
 evolve(p1, p2,         // source and destination
   genomesstepSize = 1,   // quantization steps for values
@@ -31,11 +30,37 @@ evolve(p1, p2,         // source and destination
   )
 ```
 
+## Installation
+Currently the package is not published on [`atom.io`!](https://atom.io/packages). Instead to install the package manually,
+
+1. git clone the package repo into ~/.atom/packages
+2. cd into the package directory
+3. type apm install
+4. restart atom
+
 ## Start livecoding
 
 This only works in the scope of python files. Start Supercollider FoxDot quark before toggling this package.
 
 **Toggle FoxDot** (`cmd-e`) in order to start it.
+
+## Usage
+An example of evolution from player `p1` to `p2`:
+
+```
+p1>>pluck(room=0.1, amp=0.2)
+p2>>pluck(room=0.8, amp=0.5)
+evolve(p1,p2) #Point cursor here and execute evolution with Cmd+E
+```
+
+Stop evolution
+```
+@nextBar
+def evolve_p1_p2():
+	p1>>pluck(room=[0.67],amp=[0.62])
+evolve_p1_p2() #Point cursor and stop evolution with Cmd+C
+########## Evolving from p1 to p2
+```
 
 ## Key bindings
 Replace `cmd` with `ctrl` on Windows.
