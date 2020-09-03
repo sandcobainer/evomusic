@@ -21,7 +21,7 @@ This is an extension of the native FoxDot interface for Atom. The earlier interf
 ```
 evolve(p1, p2,         // source and destination
   genomesstepSize = 1,   // quantization steps for values
-  lifetime = 2000,// Generation update time in ms
+  lifetime = 1,          // Generation update time in number of bars
   skipGenerations = 200, // play every 200th gen
   evolutions = 3000,     // number of evolutions
   mutationAmount = 0.25, // probability of mutation
