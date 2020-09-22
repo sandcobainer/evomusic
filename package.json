@@ -21,40 +21,30 @@
   "_spec": "https://www.atom.io/api/packages/foxdot/versions/1.1.0/tarball",
   "_where": "/private/var/folders/73/qd5n1bcx215_s5l37tlf0zx40000gn/T/apm-install-dir-120223-48857-r5ddiv.98rae",
   "bugs": {
-    "url": "https://github.com/KoltesDigital/atom-foxdot/issues"
+    "url": "https://github.com/sandcobainer/evomusic-foxdot/issues"
   },
   "bundleDependencies": false,
   "deprecated": false,
-  "description": "FoxDot interface for Atom.",
   "devDependencies": {
-    "@types/atom": "^1.40.1",
-    "@types/node": "^13.9.3",
-    "@typescript-eslint/eslint-plugin": "^2.24.0",
-    "@typescript-eslint/parser": "^2.24.0",
-    "babel-eslint": "^10.1.0",
     "eslint": "^6.8.0",
-    "eslint-config-prettier": "^6.10.1",
-    "eslint-plugin-import": "^2.20.1",
-    "eslint-plugin-prettier": "^3.1.2",
-    "eslint-plugin-sort-keys-fix": "^1.1.0",
     "gulp": "^4.0.2",
     "prettier": "^2.0.1",
-    "require-dir": "^1.2.0",
-    "shx": "^0.3.2",
-    "typescript": "^3.8.3"
+    "shx": "^0.3.2"
   },
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
-  "homepage": "https://github.com/KoltesDigital/atom-foxdot#readme",
+  "homepage": "https://github.com/sandcobainer/evomusic-foxdot#readme",
   "keywords": [
-    "algorave",
+    "foxdot",
     "livecoding",
-    "supercollider"
+    "supercollider",
+    "geneticalgorithm'"
   ],
   "license": "MIT",
   "main": "lib/index.js",
   "name": "foxdot",
+  "description": "FoxDot interface for applying Genetic Algorithms",
   "providedServices": {
     "autocomplete.provider": {
       "versions": {
@@ -64,7 +54,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/sandcobainer/evoMusic-foxdot.git"
+    "url": "git+https://github.com/sandcobainer/evomusic-foxdot.git"
   },
   "scripts": {
     "clean": "shx rm -rf lib",
@@ -73,7 +63,7 @@
     "watch": "tsc --watch"
   },
   "types": "lib/index.d.ts",
-  "version": "1.1.0",
+  "version": "1.2.0",
   "dependencies": {
     "async": "^3.2.0",
     "geneticalgorithm": "^1.0.2",
