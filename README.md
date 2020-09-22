@@ -15,13 +15,16 @@ This is an extension of the native FoxDot interface for Atom. The earlier interf
 - Genetic algorithms to evolve musical piece
 - Text interactions to Evolve a code snippet from player `p1` to `p2`
 - Asynchronous parallel evolutions
-- Stop getEvolutions
+- Stop evolutions
 - Visual feedback for current evolution in text editor
+- Override evolutions in the same function
+- Degree of a player is left untouched (works with sample based players like play, loop)
 
 ```
 evolve(p1, p2,         // source and destination
-  genomesstepSize = 1,   // quantization steps for values
+  stepSize = 1,   // quantization steps for values
   lifetime = 1,          // Generation update time in number of bars
+  population = 5         // Number of genomes in each generation
   skipGenerations = 200, // play every 200th gen
   evolutions = 3000,     // number of evolutions
   mutationAmount = 0.25, // probability of mutation
@@ -44,21 +47,21 @@ This only works in the scope of python files. Start Supercollider FoxDot quark b
 
 **Toggle FoxDot** (`cmd-e`) in order to start it.
 
-## Usage
+## Directed Evolution: Usage
 An example of evolution from player `p1` to `p2`:
 
 ```
-p1>>pluck(room=0.1, amp=0.2)
-p2>>pluck(room=0.8, amp=0.5)
-evolve(p1,p2) #Point cursor here and execute evolution with Cmd+E
+p1>>pluck([3,4,5],room=0.1, amp=0.2)
+p2>>pluck([3,4,5],room=0.8, amp=0.5)
+evolve(p1,p2) #Point cursor here and execute evolution with cmd+e
 ```
 
-Stop evolution
+Stop evolution: cmd+z
 ```
 @nextBar
 def evolve_p1_p2():
 	p1>>pluck(room=[0.67],amp=[0.62])
-evolve_p1_p2() #Point cursor and stop evolution with Cmd+C
+evolve_p1_p2() #Point cursor and stop evolution with cmd+z
 ########## Evolving from p1 to p2
 ```
 

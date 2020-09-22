@@ -6,6 +6,6 @@
     "alt-enter": "foxdot:evaluate-lines",
     "cmd-.": "foxdot:clear-clock",
     "cmd-e": "foxdot:evolve",
-    "cmd-c": "foxdot:stopevo"
+    "cmd-z": "foxdot:stopevo"
   }
 }
