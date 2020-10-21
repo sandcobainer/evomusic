@@ -21,7 +21,7 @@
   "_spec": "https://www.atom.io/api/packages/foxdot/versions/1.1.0/tarball",
   "_where": "/private/var/folders/73/qd5n1bcx215_s5l37tlf0zx40000gn/T/apm-install-dir-120223-48857-r5ddiv.98rae",
   "bugs": {
-    "url": "https://github.com/sandcobainer/evomusic-foxdot/issues"
+    "url": "https://github.com/sandcobainer/evomusic/issues"
   },
   "bundleDependencies": false,
   "deprecated": false,
@@ -34,7 +34,7 @@
   "engines": {
     "atom": ">=1.0.0 <2.0.0"
   },
-  "homepage": "https://github.com/sandcobainer/evomusic-foxdot#readme",
+  "homepage": "https://github.com/sandcobainer/evomusic#readme",
   "keywords": [
     "foxdot",
     "livecoding",
@@ -54,7 +54,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/sandcobainer/evomusic-foxdot.git"
+    "url": "https://github.com/sandcobainer/evomusic.git"
   },
   "scripts": {
     "clean": "shx rm -rf lib",
@@ -66,7 +66,16 @@
   "version": "1.2.0",
   "dependencies": {
     "async": "^3.2.0",
-    "geneticalgorithm": "^1.0.2",
-    "lodash": "^4.17.15"
+    "atom-space-pen-views": "^2.0.3",
+    "express": "^4.17.1",
+    "fs": "0.0.1-security",
+    "https": "^1.0.0",
+    "lodash": "^4.17.15",
+    "ml-pca": "^4.0.1",
+    "plotly.js-dist": "^1.57.0",
+    "socket.io": "^2.3.0",
+    "socket.io-client": "^2.3.1",
+    "tsneez": "^0.9.3",
+    "ws": "^7.3.1"
   }
 }
