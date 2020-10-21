@@ -17,11 +17,6 @@ Clock.bpm = 101
 Samples.addPath('/Users/a2012/Downloads')
 chords = (VI)
 
-p1 >> pads(degree= [1,5], amp=0.2, lpf=5000)
-p2 >> pads(degree= [2,3], amp=0.9, lpf=200)
-evolve(p1, p2, evolutions=3000, skipGenerations=300, population=40, stepSize=0.1, mutationAmount=0.2)
-
-k1>>klank(room=0.2, slide=0.6, tremolo=0.5, echo=0.4, bend = 0.5, spin = 4)
-
-k2>>klank(room=1, slide=0.1, tremolo=0, echo=0, bend = 2, spin =18)
-evolve(k1,k2, stepSize=0.2, mutationAmount=0.4, evolutions=3000, skipGenerations=50, lifetime=2)
+p4 >> pads(degree=[1,5,7], amp=0.1, lpf=9000, hpf=14000)
+p5 >> pads(degree=[2,4,6], amp=0.2, lpf=8000, hpf=16000)
+evolve(p4, p5, evolutions=1000, skipGenerations=100, population=60, stepSize=0.1, mutationAmount=0.02,crossoverAmount=0.01)
