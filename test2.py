@@ -17,6 +17,5 @@ Clock.bpm = 101
 Samples.addPath('/Users/a2012/Downloads')
 chords = (VI)
 
-p4 >> pads(degree=[1,5,7], amp=0.1, lpf=9000, hpf=14000)
-p5 >> pads(degree=[2,4,6], amp=0.2, lpf=8000, hpf=16000)
-evolve(p4, p5, evolutions=1000, skipGenerations=100, population=60, stepSize=0.1, mutationAmount=0.02,crossoverAmount=0.01)
+j1>>pluck(degree=[12,0,3,-1],amp=[0.1,0.50], chop=0.4, tremolo=0.2)
+evolve(j1,stepSize=0.1, evolutions=100, skipGenerations=25, mutationAmount=0.01)
