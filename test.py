@@ -31,20 +31,7 @@ n1>>nylon(chords)
 
 b1>>loop('HarpAscend.wav',dur=4,chop=3,slide=0.25)
 b2>>loop('HarpAscend.wav',dur=4,chop=3,slide=0)
-evolve(b1, stepSize=0.25, population=3, distance=4)
-
-@nextBar
-def evolve_b1():
-	b1>>loop('HarpAscend.wav',dur=[4.00],chop=[3],slide=[0.25])
-evolve_b1()
-## Novelty search around b1
-
-@nextBar
-def evolve_b1_b2():
-	b1>>loop('HarpAscend.wav',dur=[4.00],chop=[3],slide=[0.25])
-evolve_b1_b2()
-# Evolving from b1 to b2
-
+evolve(b1, stepSize=0.25, population=3, distance=4, evolutions)
 
 
 j1>>pluck(degree=[15,0,3,-1],amp=[0.40,0.50])
@@ -53,6 +40,6 @@ evolve(j1,j2,stepSize=0.1)
 
 @nextBar
 def evolve_j1_j2():
-	j1>>pluck(degree=[10,-1,3,-1],amp=[0.20,0.50])
-	j1>>pluck(degree=[14,-1,3,-2],amp=[0.10,0.50])
-### Evolving from j1 to j2
+	j1>>pluck(degree=[1,0,1,0],amp=[1.00,0.50])
+evolve_j1_j2()
+##|############################## Evolving from j1 to j2
