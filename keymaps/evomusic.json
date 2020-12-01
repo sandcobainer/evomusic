@@ -1,12 +1,13 @@
 {
   ".workspace .editor[data-grammar='source python']": {
-    "cmd-alt-f": "foxdot:toggle",
+    "cmd-alt-f": "evo:toggle",
     "cmd-enter": "foxdot:evaluate-blocks",
     "cmd-alt-enter": "foxdot:evaluate-file",
     "alt-enter": "foxdot:evaluate-lines",
     "cmd-.": "foxdot:clear-clock",
-    "cmd-e": "foxdot:evolve",
-    "cmd-z": "foxdot:stopevo",
-    "ctrl-alt-h": "evo:vis"
+    "cmd-e": "evo:evolve",
+    "cmd-z": "evo:stopevo",
+    "cmd-up": "evo:fitness-up",
+    "cmd-down": "evo:fitness-down"
   }
 }
