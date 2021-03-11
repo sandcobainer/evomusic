@@ -2,26 +2,34 @@
 <html lang="en">
   <head
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-    <link rel="stylesheet" href="../../node_modules/bulma/css/bulma.css">
     <script src="plotly.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
     <script src="index.js"></script>
   </head>
-  <body class="has-background-dark">
-      <div class="container-fluid" id="myDiv"></div>
-      <div class="container-fluid has-text-light" id="genVis">
-        <div class="columns">
-          <div class="column is-1">
-            <h3 class="has-text-light"> Evolution </h3>
-          </div>
-          <div class="column is-9">
-            <input class="input is-info" type="text" placeholder="Current Evolution">
-          </div>
-          <div class="column is-2">
-            <input class="input" type="text" placeholder="Fitness">
+  <body class="bg-dark" style="font-size:18px;">
+    <div class="container-fluid" id="myDiv"></div>
+    <div class="container-fluid" id="genVis">
+      <div class="row">
+        <div class="col-md-10">
+          <div class="bg-secondary card">
+            <div class=" card-body">
+              <h5 class="card-title">Current Evolution</h5>
+              <p class="text-light bg-info card-text" id="code">current evolution in code..
+              </p>
+            </div>
           </div>
         </div>
-
+        <div class="col-md-2">
+          <div class="bg-secondary card">
+            <div class="card-body">
+              <h5 class="card-title">Fitness</h5>
+              <kbd style="font-size:20px;" id="fitness">0</kbd>
+            </div>
+          </div>
+        </div>
       </div>
+
+    </div>
   </body>
 
 </html>
