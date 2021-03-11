@@ -18,34 +18,32 @@ Samples.addPath('/Users/a2012/Downloads')
 # setup a chord Pattern
 chords= (I, VI, V)
 
-# source musical simple using a wav sample
-b1>>loop('HarpAscend.wav',dur=0.5,chop=0.2,slide=0.4) # source
-
-b2>>loop('HarpAscend.wav',dur=4,chop=5,slide=4) # destination
-
-# FoxDot native interpolations with timevars : linvar, sinvar, expvar
-b1>>loop('HarpAscend.wav',dur=linvar([0.5,4],64),chop=linvar([0.2,5],64),slide=linvar([0.4,4],64))
 
 
-# evomusic directed evolution with multiple configs
-b1>>loop('HarpAscend.wav',dur=0.5,chop=0.2,slide=0.4)
-b2>>loop('HarpAscend.wav',dur=4,chop=5,slide=4)
-evolve(b1, b2, stepSize=0.25, lifetime=1, population=5, skipGenerations=50, mutationAmount=0.4, crossooverAmount=0.01, evolutions=50)
-
-@nextBar
-def evolve_b1_b2():
-	b1>>loop('HarpAscend.wav',dur=[4.00],chop=[5],slide=[4.00])
-evolve_b1_b2()
-#|### Evolving from b1 to b2
-
-@nextBar
-def evolve_b1_b2():
-	b1>>loop('HarpAscend.wav',dur=[4.00],chop=[5],slide=[4.00])
-evolve_b1_b2()
-#|### Evolving from b1 to b2
+s1>>scatter(vib=[0.2],echo=[0.40],chop=[0.5],room=1)
 
 
 
+
+p1>>nylon()
+
+s1.stop()
+
+g1.amp=0.3
+
+g1>>space()
+
+h1.degree='--(=-)-'
+h1.amp=0.4
+
+
+
+
+
+
+k1.amp=linvar([0.4,0.7],16)
+k1>>play(sample=2, tremolo=1, echo=0.2)
+k1.degree='--(=-)-'
 
 
 
@@ -54,21 +52,33 @@ evolve_b1_b2()
 
 
 
-
-p1>>pluck()
-
+w1>>play('.....',amp=0.1,spin=0.2,sample=2)
 
 
 
+k1.solo()
+
+w1.solo()
+
+c1>>creep(amp=0.2, degree=[5,0,1,0,3,0], dur=[4,1,1,1,1])
 
 
 
 
-b2>>loop('HarpAscend.wav',dur=4,chop=3,slide=1)
-evolve(b2, stepSize=0.25, lifetime=2, population=20, mutationAmount = 0.4, crossooverAmount = 0.2, evolutions=5)
+c1.solo()
 
-@nextBar
-def evolve_b2():
-	b2>>loop('HarpAscend.wav',dur=[4.00],chop=[4],slide=[1.00])
-evolve_b2()
-## Evolving from b2
+r1>>ripple()
+
+
+k1>>klank()
+
+
+
+q1>>play()
+
+
+
+
+
+
+b1>>sawbass()

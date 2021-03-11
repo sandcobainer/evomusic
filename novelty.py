@@ -16,5 +16,15 @@ VII7 = PGroup(VII).concat(12)
 Clock.bpm = 105
 Samples.addPath('/Users/a2012/Downloads')
 
-j1>>pluck(degree=[12,0,3,-1],chop=1,tremolo=0.20)
-evolve(j1, stepSize=0.1, skipGenerations=0, population=20, lifetime=1)
+
+s1>>bass(vib=[0.2],echo=[0.40],chop=[0.5],room=1)
+s2>>bass(vib=[0.9],echo=[0.2],chop=[1],room=2)
+evolve(s1, s2, evolutions=50, lifetime=2, mutationAmount=0.5)
+
+@nextBar
+def evolve_s1_s2():
+	s1>>bass(vib=[0.10],echo=[0.20],chop=[0],room=[0.50])
+    s1.chop=1
+    s1.amp=[0,0,0,2]
+evolve_s1_s2()
+############ Evolving from s1 to s2
