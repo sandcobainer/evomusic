@@ -1,4 +1,4 @@
-from .Patterns import Pattern, PGroup, asStream
+# evolution:1
 I   = PGroup(0, 2, 4)
 II  = PGroup(1, 3, 5)
 III = PGroup(2, 4,-1)
@@ -17,14 +17,19 @@ Clock.bpm = 105
 Samples.addPath('/Users/a2012/Downloads')
 
 
-s1>>bass(vib=[0.2],echo=[0.40],chop=[0.5],room=1)
-s2>>bass(vib=[0.9],echo=[0.2],chop=[1],room=2)
-evolve(s1, s2, evolutions=50, lifetime=2, mutationAmount=0.5)
+s1>>pluck(vib=[0.2],echo=[0.40],chop=[0.5],room=1,amp=0.9)
+
+
+
+
+
+
+
+
+s2>>pluck(vib=[0.9],echo=[0.2],chop=[1],room=2,amp=0.5)
+evolve(s2, evolutions=50, lifetime=2, mutationAmount=0.5)
 
 @nextBar
-def evolve_s1_s2():
-	s1>>bass(vib=[0.10],echo=[0.20],chop=[0],room=[0.50])
-    s1.chop=1
-    s1.amp=[0,0,0,2]
-evolve_s1_s2()
-############ Evolving from s1 to s2
+def evolve_s2():
+	s2>>pluck(vib=[0.80],echo=[0.10],chop=[1],room=[0.50],amp=[1.00])
+evolve_s2()

@@ -8,7 +8,6 @@
 		opacity: 0;
 	}
 }
-
 atom-text-editor.editor {
 	.highlight.foxdot-flash .region {
 		animation: foxdot-flash 300ms linear forwards;
@@ -16,6 +15,57 @@ atom-text-editor.editor {
 		z-index: -2;
 	}
 }
+
+@keyframes fitup-flash {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+atom-text-editor.editor {
+	.highlight.rating-flash .region {
+		animation: fitup-flash 300ms linear forwards;
+		background-color: green;
+		z-index: -2;
+	}
+}
+
+@keyframes fitdown-flash {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+atom-text-editor.editor {
+	.highlight.rating-flash .region {
+		animation: fitdown-flash 300ms linear forwards;
+		background-color: orange;
+		z-index: -2;
+	}
+}
+
+
+@keyframes stopevo-flash {
+	from {
+		opacity: 1;
+	}
+	to {
+		opacity: 0;
+	}
+}
+atom-text-editor.editor {
+	.highlight.rating-flash .region {
+		animation: stopevo-flash 600ms linear backwards;
+		background-color: red;
+		z-index: -2;
+	}
+}
+
+
 
 atom-pane div.foxdot-logger {
 	padding: 3px 10px;
