@@ -6,19 +6,13 @@
   "_location": "/foxdot",
   "_phantomChildren": {},
   "_requested": {
-    "type": "remote",
-    "raw": "https://www.atom.io/api/packages/foxdot/versions/1.1.0/tarball",
-    "rawSpec": "https://www.atom.io/api/packages/foxdot/versions/1.1.0/tarball",
-    "saveSpec": "https://www.atom.io/api/packages/foxdot/versions/1.1.0/tarball",
-    "fetchSpec": "https://www.atom.io/api/packages/foxdot/versions/1.1.0/tarball"
+    "type": "remote"
   },
   "_requiredBy": [
     "#USER",
     "/"
   ],
-  "_resolved": "https://www.atom.io/api/packages/foxdot/versions/1.1.0/tarball",
   "_shasum": "dfd6e88721fa03453a75970b45d1174bd1ba8f2f",
-  "_spec": "https://www.atom.io/api/packages/foxdot/versions/1.1.0/tarball",
   "_where": "/private/var/folders/73/qd5n1bcx215_s5l37tlf0zx40000gn/T/apm-install-dir-120223-48857-r5ddiv.98rae",
   "bugs": {
     "url": "https://github.com/sandcobainer/evomusic/issues"
@@ -79,6 +73,9 @@
     "lodash": "^4.17.15",
     "ml-pca": "^4.0.1",
     "plotly.js-dist": "^1.57.0",
-    "ws": "^7.3.1"
+    "ws": "^7.3.1",
+    "http": "0.0.0",
+    "node-osc": "^2.0.0",
+    "socket.io": "1.4.5"
   }
 }

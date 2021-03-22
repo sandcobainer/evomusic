@@ -1,0 +1,68 @@
+event,code,tstamp,time
+startNoveltySearch,,1616089347813,Thu Mar 18 2021 13:42:27 GMT-0400 (Eastern Daylight Time)
+evaluateCode,"@nextBar
+def evolve_s2():
+	s2>>pluck(vib=[0.90],echo=[0.20],chop=[1],room=[2.00],amp=[0.50])
+evolve_s2()
+",1616089347832,Thu Mar 18 2021 13:42:27 GMT-0400 (Eastern Daylight Time)
+evaluateCode,"@nextBar
+def evolve_s2():
+	s2>>pluck(vib=[0.90],echo=[0.20],chop=[1],room=[2.00],amp=[0.50])
+evolve_s2()
+",1616089351838,Thu Mar 18 2021 13:42:31 GMT-0400 (Eastern Daylight Time)
+positiveFitness,,1616089354899,Thu Mar 18 2021 13:42:34 GMT-0400 (Eastern Daylight Time)
+evaluateCode,"@nextBar
+def evolve_s2():
+	s2>>pluck(vib=[0.70],echo=[0.50],chop=[1],room=[0.50],amp=[0.40])
+evolve_s2()
+",1616089355837,Thu Mar 18 2021 13:42:35 GMT-0400 (Eastern Daylight Time)
+positiveFitness,,1616089355929,Thu Mar 18 2021 13:42:35 GMT-0400 (Eastern Daylight Time)
+positiveFitness,,1616089357409,Thu Mar 18 2021 13:42:37 GMT-0400 (Eastern Daylight Time)
+positiveFitness,,1616089358449,Thu Mar 18 2021 13:42:38 GMT-0400 (Eastern Daylight Time)
+evaluateCode,"@nextBar
+def evolve_s2():
+	s2>>pluck(vib=[0.70],echo=[0.50],chop=[1],room=[0.50],amp=[0.40])
+evolve_s2()
+",1616089359836,Thu Mar 18 2021 13:42:39 GMT-0400 (Eastern Daylight Time)
+negativeFitness,,1616089361169,Thu Mar 18 2021 13:42:41 GMT-0400 (Eastern Daylight Time)
+negativeFitness,,1616089361977,Thu Mar 18 2021 13:42:41 GMT-0400 (Eastern Daylight Time)
+negativeFitness,,1616089362865,Thu Mar 18 2021 13:42:42 GMT-0400 (Eastern Daylight Time)
+evaluateCode,"@nextBar
+def evolve_s2():
+	s2>>pluck(vib=[0.70],echo=[0.20],chop=[0],room=[1.00],amp=[0.40])
+evolve_s2()
+",1616089363837,Thu Mar 18 2021 13:42:43 GMT-0400 (Eastern Daylight Time)
+negativeFitness,,1616089366306,Thu Mar 18 2021 13:42:46 GMT-0400 (Eastern Daylight Time)
+negativeFitness,,1616089366555,Thu Mar 18 2021 13:42:46 GMT-0400 (Eastern Daylight Time)
+negativeFitness,,1616089366745,Thu Mar 18 2021 13:42:46 GMT-0400 (Eastern Daylight Time)
+negativeFitness,,1616089367313,Thu Mar 18 2021 13:42:47 GMT-0400 (Eastern Daylight Time)
+negativeFitness,,1616089367512,Thu Mar 18 2021 13:42:47 GMT-0400 (Eastern Daylight Time)
+evaluateCode,"@nextBar
+def evolve_s2():
+	s2>>pluck(vib=[0.70],echo=[0.20],chop=[0],room=[1.00],amp=[0.40])
+evolve_s2()
+",1616089367837,Thu Mar 18 2021 13:42:47 GMT-0400 (Eastern Daylight Time)
+positiveFitness,,1616089370338,Thu Mar 18 2021 13:42:50 GMT-0400 (Eastern Daylight Time)
+positiveFitness,,1616089370617,Thu Mar 18 2021 13:42:50 GMT-0400 (Eastern Daylight Time)
+positiveFitness,,1616089370896,Thu Mar 18 2021 13:42:50 GMT-0400 (Eastern Daylight Time)
+evaluateCode,"@nextBar
+def evolve_s2():
+	s2>>pluck(vib=[0.90],echo=[0.20],chop=[1],room=[2.00],amp=[0.50])
+evolve_s2()
+",1616089371837,Thu Mar 18 2021 13:42:51 GMT-0400 (Eastern Daylight Time)
+evaluateCode,"@nextBar
+def evolve_s2():
+	s2>>pluck(vib=[0.70],echo=[0.50],chop=[1],room=[0.50],amp=[0.40])
+evolve_s2()
+",1616089375838,Thu Mar 18 2021 13:42:55 GMT-0400 (Eastern Daylight Time)
+evaluateCode,"@nextBar
+def evolve_s2():
+	s2>>pluck(vib=[0.70],echo=[0.50],chop=[1],room=[0.50],amp=[0.40])
+evolve_s2()
+",1616089379842,Thu Mar 18 2021 13:42:59 GMT-0400 (Eastern Daylight Time)
+evaluateCode,"@nextBar
+def evolve_s2():
+	s2>>pluck(vib=[0.70],echo=[0.20],chop=[0],room=[1.00],amp=[0.40])
+evolve_s2()
+",1616089383837,Thu Mar 18 2021 13:43:03 GMT-0400 (Eastern Daylight Time)
+stopEvo,,1616089387712,Thu Mar 18 2021 13:43:07 GMT-0400 (Eastern Daylight Time)

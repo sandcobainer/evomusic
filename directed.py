@@ -1,37 +1,38 @@
-from .Patterns import Pattern, PGroup, asStream
-I   = PGroup(0, 2, 4)
-II  = PGroup(1, 3, 5)
-III = PGroup(2, 4,-1)
-IV  = PGroup(3, 5, 0)
-V   = PGroup(4,-1, 1)
-VI  = PGroup(5, 0, 2)
-VII = PGroup(-1,1, 3)
-I7   = PGroup(I).concat(6)
-II7  = PGroup(II).concat(7)
-III7 = PGroup(III).concat(8)
-IV7  = PGroup(IV).concat(9)
-V7   = PGroup(V).concat(10)
-VI7  = PGroup(VI).concat(11)
-VII7 = PGroup(VII).concat(12)
-Clock.bpm = 105
-Samples.addPath('/Users/a2012/Downloads')
-chords = (VI)
+"""
+Directed Evolution allows the live coder to evolve a musical simple
+s1 to s2
+using the following genetic algorithm parameters:
 
-#
-j1>>pluck(degree=[12,0,3,-1],chop=1,tremolo=0.20)
-j2>>pluck(degree=[12,0,4,-1],chop=[1],tremolo=[0.30])
-evolve(j1, j2, stepSize=0.01, lifetime = 2, evolutions=40, skipGenerations=2, population=3)
+stepSize = 0.1,          # quantization steps for values
+lifetime = 1,            # Generation update time in number of bars
+population = 5           # Number of genomes in each generation
+skipGenerations = 1,     # play every 200th gen
+evolutions = 100,        # number of evolutions
+mutationAmount = 0.5,    # probability of mutation
+crossoverAmount = 0.5    # probability of crossover
+
+To execute a directed evolution, list players p1 and p2 on successive lines,
+followed by evolve() function. Place cursor after the evolve function handling
+and use key combination Cmd/Ctrl + E to start a directed evolution.
+p1>> ..
+p2>> ..
+evolve() Cmd/Ctrl + E
+
+To stop an evolution, place the cursor at the end of the generated code snippet
+at evolve_s1_s2() Cmd/Ctrl+Z
+
+The genetic algorithm generates 'n' evolutions of musical simples that run for evolutions * lifetime number of
+musical bars (calculated according to tempo and metric structure)
+
+Example of Directed Evolution
+"""
+
+
+s1>>pluck(vib=[0.2],echo=[0.40],chop=[0.5],room=1,amp=0.9)
+s2>>pluck(vib=[0.9],echo=[0.2],chop=[1],room=2,amp=0.5)
+evolve(s1, s2, evolutions=50, lifetime=2, mutationAmount=0.5)
 
 @nextBar
-def evolve_j1_j2():
-	j1>>pluck(degree=[12,0,5,-1],chop=[0],tremolo=[0.06])
-evolve_j1_j2()
-################# Evolving from j1 to j2
-
-
-
-k1>>klank(degree=[12,0,3,-1],chop=1,dur=4,amp=0.9)
-k2>>klank(degree=[12,0,4,-1],chop=[1],tremolo=[0.30])
-evolve(k1,k2, skipGenerations=50, evolutions=3000, lifetime=4)
-
-d1>>play('v-(-[=o])-',sample=7, echo=0)
+def evolve_s1_s2():
+	s1>>pluck(vib=[0.10],echo=[0.30],chop=[0],room=[0.50],amp=[0.50])
+evolve_s1_s2()
