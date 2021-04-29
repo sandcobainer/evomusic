@@ -1,26 +1,21 @@
 # evoMusic: Genetic Algorithm interface for FoxDot in Atom
 
-See [FoxDot's repository](https://github.com/Qirky/FoxDot) for installation and usage instructions.
+This is an extension of the native FoxDot interface for Atom and hence requires all the setup for the former project. See [FoxDot's repository](https://github.com/Qirky/FoxDot) for installation and usage instructions.
 
-This is an extension of the native FoxDot interface for Atom. The earlier interface had the following features:
+This APM package is designed specifically for Genetic Algorithms (GA) in FoxDot. Two variants of GA are applied with FoxDot player objects. Each player object in it's current state is considered a genome and is evolved using 2 variants of the GA
 
-- Multiple cursors are executed in order of creation.
-- Can evaluate the entire file.
-- Autocompletion.
-- Message Logger
+1. Directed Evolution: Evolves a player `p1` to `p2` over a defined number of evolutions and population. In each generation, the fittest possible player is selected and played as the object moves towards the destination player.
 
- This APM package includes the following extensions, designed specifically for Genetic Algorithms in FoxDot
+2. Novelty Search: Essentially a goal-less search, this variant allows the coder to mutate and direct the search to find new players around the source player `p1` provided. In this, the coder is expected to rate the players with a positive or negative fitness and the algorithm executes every member of the population while doing so. To spawn
 
-- Parser Grammar to parse and understand FoxDot Player objects
-- Genetic algorithms to evolve musical piece
-- Text interactions to Evolve a code snippet from player `p1` to `p2`
-- Asynchronous parallel evolutions
-- Cmd/Ctrl + Z to stop evolutions
-- Visual feedback for current evolution in text editor
-- Override evolutions in the same function
-- Degree of a player is left untouched (works with sample based players like play, loop)
-- Euclidean normalization for fitness
-- WebSocket server for visualization
+
+**Stop FoxDot** (`cmd-e`) in order to start an evolution.
+**Stop FoxDot** (`cmd-z`) in order to stop an evolution.
+**Toggle FoxDot** (`cmd-up`) in order to start it.
+**Toggle FoxDot** (`cmd-e`) in order to start it.
+
+Note: `cmd` is replaced by `ctrl` in Windows
+
 
 # Evolve API
 Parameters for a directed search:
@@ -40,16 +35,15 @@ evolve(p1, p2,           // source and destination
 ## Installation
 Currently the package is not published on [`atom.io`!](https://atom.io/packages). Instead to install the package manually,
 
-1. git clone the package repo into ~/.atom/packages
-2. cd into the package directory
-3. type apm install
-4. restart atom
+1. Navigate to .atom/packages and download this repository there
+2. type apm install in the terminal
+3. restart atom
 
 ## Start livecoding
 
 This only works in the scope of python files. Start Supercollider FoxDot quark before toggling this package.
 
-**Toggle FoxDot** (`cmd-e`) in order to start it.
+**Toggle FoxDot** (`cmd-e`) in order to start evomusic in Atom.
 
 ## Directed Evolution: Usage
 An example of evolution from player `p1` to `p2`:

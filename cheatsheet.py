@@ -6,10 +6,12 @@ Example:
 p1>>synth(at1=val1, atr2=[val2.1, val2.2, val2.3])
 
 # list of player objects:
-['loop', 'stretch', 'play1', 'play2', 'audioin', 'noise', 'dab', 'varsaw', 'lazer', 'growl', 'bass', 'dirt', 'crunch', 'rave', 'scatter', 'charm', 'bell',
-'gong', 'soprano', 'dub', 'viola', 'scratch', 'klank', 'feel', 'glass', 'soft', 'quin', 'pluck', 'spark', 'blip', 'ripple', 'creep', 'orient', 'zap', 'marimba',
-'fuzz', 'bug', 'pulse', 'saw', 'snick', 'twang', 'karp', 'arpy', 'nylon', 'donk', 'squish', 'swell', 'razz', 'sitar', 'star', 'jbass', 'sawbass', 'prophet', 'pads',
-'pasha', 'ambi', 'space', 'keys', 'dbass', 'sinepad']
+['loop', 'stretch', 'play1', 'play2', 'audioin', 'noise', 'dab', 'varsaw', 'lazer', 'growl', 'bass',
+ 'dirt', 'crunch', 'rave', 'scatter', 'charm', 'bell',
+'gong', 'soprano', 'dub', 'viola', 'scratch', 'klank', 'feel', 'glass', 'soft', 'quin', 'pluck',
+'spark', 'blip', 'ripple', 'creep', 'orient', 'zap', 'marimba','fuzz', 'bug', 'pulse', 'saw',
+ 'snick', 'twang', 'karp', 'arpy', 'nylon', 'donk', 'squish', 'swell', 'razz', 'sitar', 'star',
+ 'jbass', 'sawbass', 'prophet', 'pads','pasha', 'ambi', 'space', 'keys', 'dbass', 'sinepad']
 
 # list of player attributes:
 ['degree':[-16,16],'oct':[0,8],'dur':[0,64],'delay': [0,8],'blur':[0,64],'amplify':[0,1],
@@ -20,6 +22,7 @@ p1>>synth(at1=val1, atr2=[val2.1, val2.2, val2.3])
 'tremolo':[0,64],'echo':[0,64],'echotime':[0,8],'spin':[0,32],'cut':[0,1],'room':[0,1],'mix':[0,1],
 'formant':[1,7],'shape':[0,1],'drive':[0,1],'dist':[0,1, 'float'],'crush':[0,32],'bits':[0,8]
 
+d1>>play('x-o-')
 
 '!': Yeah!
 '#': Crash
@@ -64,7 +67,7 @@ p1>>synth(at1=val1, atr2=[val2.1, val2.2, val2.3])
 'Y': High buzz
 'Z': Loud stabs
 '\\': Lazer
-'^': 'Donk'
+'^': Donk
 'a': Gameboy hihat
 'b': Noisy beep
 'c': Voice/string

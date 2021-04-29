@@ -27,7 +27,19 @@ musical bars (calculated according to tempo and metric structure)
 Example of Directed Evolution
 """
 
+s2>>pluck(degree=[4,5,3], chop=1, vib=[0.9],echo=[0.2],chop=[1],dur=4)
+evolve(s2, population=5, lifetime=1, mutationAmount=0.5)
 
 
-s2>>bass(degree=[-5,-8,1,1], vib=[0.9],echo=[0.2],chop=[1],room=2,amp=0.5)
-evolve(s2, evolutions=50, lifetime=2, mutationAmount=0.5)
+
+
+
+
+
+c3>>space(degree=[3,3,0,5],amp=0.08,tremolo=1)
+evolve(c3,lifetime=1, mutationAmount=0.8, population=6)
+
+@nextBar
+def evolve_c3():
+	c3>>space(degree=[3,5,0,5],amp=[0.00],tremolo=[0.20])
+evolve_c3()
